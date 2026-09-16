@@ -60,7 +60,7 @@ main{overflow-wrap:break-word;max-width:680px;margin:0 auto;padding:18px 16px 80
 <div class="controls">
 <div class="langrow" role="group" aria-label="Idioma"><button id="lang-es" type="button">ES · Español</button><button id="lang-en" type="button">EN · English</button></div>
 <select id="camp">
-<option value="lure_of_the_valley">Lure of the Valley (caja base)</option>
+<option value="lure_of_the_valley">Lure of the Valley</option>
 <option value="legacy_of_the_ancestors">Legacy of the Ancestors</option>
 <option value="spire_in_bloom">Spire in Bloom</option>
 <option value="shadow_of_the_storm">Shadow of the Storm</option>
@@ -99,7 +99,15 @@ async function init(){
 }
 const $=id=>document.getElementById(id);
 const out=$('out'),q=$('q'),camp=$('camp'),back=$('back');
-function paintLang(){$('lang-es').classList.toggle('active',currentLang==='es');$('lang-en').classList.toggle('active',currentLang==='en');}
+const CAMPAIGN_NAMES={
+ lure_of_the_valley:{en:'Lure of the Valley',es:'El señuelo del valle'},
+ legacy_of_the_ancestors:{en:'Legacy of the Ancestors',es:'El legado de los ancestros'},
+ spire_in_bloom:{en:'Spire in Bloom',es:'La aguja en flor'},
+ shadow_of_the_storm:{en:'Shadow of the Storm',es:'La sombra de la tormenta'},
+ into_the_maw:{en:'Into the Maw',es:'En las fauces'}
+};
+function paintCampNames(){for(const o of camp.options){const n=CAMPAIGN_NAMES[o.value];if(n)o.textContent=currentLang==='es'?n.es+' · '+n.en:n.en;}}
+function paintLang(){$('lang-es').classList.toggle('active',currentLang==='es');$('lang-en').classList.toggle('active',currentLang==='en');paintCampNames();}
 function setLang(l){currentLang=l;localStorage.setItem('ebr_lang',l);paintLang();syncUrl(currentN);if(currentN)lookup(currentN,false);}
 $('lang-es').onclick=()=>setLang('es');$('lang-en').onclick=()=>setLang('en');
 let hist=[];
