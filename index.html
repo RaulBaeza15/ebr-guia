@@ -117,6 +117,9 @@ function lookup(raw,push=true){
    if(idx[base]){entry=idx[base];warn='No existe '+n+' en la guia online; se muestra '+base+'.';n=base;}
  }
  if(!entry){
+   currentN=n;
+   q.value=n;
+   syncUrl(n);
    const chap=n.split('.')[0];
    const avail=Object.keys(idx).filter(k=>k===chap||k.startsWith(chap+'.'));
    avail.sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
