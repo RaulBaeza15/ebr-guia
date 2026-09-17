@@ -49,7 +49,7 @@ main{overflow-wrap:break-word;max-width:680px;margin:0 auto;padding:18px 16px 80
 .note{margin-top:24px;padding-top:12px;border-top:1px solid #2a2c22;color:var(--muted);font-size:.75rem;font-family:system-ui,sans-serif;text-align:center}
 .note a{color:var(--muted)}
 .warn{background:#3a2a1a;border:1px solid #6a4a2a;color:#e8c9a0;padding:10px 14px;border-radius:10px;font-family:system-ui,sans-serif;font-size:.85rem;margin-bottom:14px}
-.langrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}.langrow button{padding:9px 12px;background:var(--panel);border:1px solid #3a3d30;color:var(--muted);font:600 .85rem system-ui,sans-serif}.langrow button.active{background:var(--accent2);border-color:#6380c3;color:#fff}.auto{background:#202b45;border:1px solid #405c91;color:#bfd1ff;padding:9px 12px;border-radius:10px;font:600 .78rem system-ui,sans-serif;margin-bottom:14px}
+.langrow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}.langrow button{padding:9px 12px;background:var(--panel);border:1px solid #3a3d30;color:var(--muted);font:600 .85rem system-ui,sans-serif}.langrow button.active{background:var(--accent2);border-color:#6380c3;color:#fff}.auto{color:var(--muted);font:400 .72rem system-ui,sans-serif;letter-spacing:.01em;margin:-1px 2px 15px}
 </style>
 </head>
 <body>
@@ -162,7 +162,7 @@ function lookup(raw,push=true){
  let h='<div class="entry"><h2>'+esc(n)+(title?' &middot; '+esc(title):'')+'</h2>';
  if(title) h+='<div class="chapter">'+(currentLang==='es'?'Capítulo ':'Chapter ')+esc(n.split('.')[0])+'</div>';
  if(warn) h+='<div class="warn">'+esc(warn)+'</div>';
- if(currentLang==='es'&&hasEs) h+='<div class="auto">Traducción automática no oficial · muestra de 20 entradas</div>';
+ if(currentLang==='es'&&hasEs) h+='<div class="auto">Muestra de 20 entradas · traducción automática no oficial</div>';
  if(currentLang==='es'&&!hasEs) h+='<div class="warn">Esta entrada aún no tiene traducción española. Se muestra el texto oficial en inglés.</div>';
  for(const b of shown.b){
    if(b.t==='h') h+='<h3>'+linkify(b.x,idx)+'</h3>';
