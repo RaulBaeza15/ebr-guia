@@ -1,7 +1,7 @@
-# ebr-guia — Earthborne Rangers campaign guide, errata & FAQ reader
+# ebr-guia — Earthborne Rangers campaign guide, errata, FAQ & reference reader
 
 A bilingual (ES/EN), mobile-friendly reader for the Earthborne Rangers campaign
-guide, official errata and FAQ. Published via GitHub Pages. Content is
+guide, official errata, FAQ, rules glossary and one-day missions. Published via GitHub Pages. Content is
 encrypted client-side; the decryption key travels in the URL fragment (`#k=...`)
 so it never reaches the server.
 
@@ -16,9 +16,12 @@ so it never reaches the server.
   online campaign entries.)
 - **The Elder's Book of Uncommon Wisdom** (15 rebalanced ranger cards).
 - **FAQ** (12 official answers).
+- **Rules Glossary** (109 terms, A–Z).
+- **One-Day Missions** (3 standalone missions: Animal Rescue, Missing Person,
+  Predatory Instincts — 15 entries with full narrative text).
 
 An in-page index (☰) lets readers browse every campaign entry and every
-errata/FAQ section.
+errata/FAQ/reference section.
 
 ## Sources
 
@@ -34,6 +37,8 @@ game's official online rules hub:
 - Elder's Book of Uncommon Wisdom: <https://thelivingvalley.earthbornegames.com/docs/updates/elders_book_of_uncommon_wisdom/>
   (PDF: <https://earthbornegames.com/wp-content/uploads/Rebalanced-Ranger-Cards_eng_web.pdf>)
 - FAQ: <https://thelivingvalley.earthbornegames.com/docs/faq/>
+- Rules Glossary: <https://thelivingvalley.earthbornegames.com/docs/rules_glossary/>
+- One-Day Missions: <https://thelivingvalley.earthbornegames.com/docs/one_day_missions/>
 
 Each entry in the reader links back to its source page. Spanish translations
 are automatic and unofficial ("Traducción automática no oficial"); card and
